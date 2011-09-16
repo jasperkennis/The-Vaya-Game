@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.cocos2d.nodes.CCSprite;
 
-public class Tile {
+public class TileObject {
 
 	protected ArrayList<CCSprite> _sprites;
 	protected int _activeSprite = 0;
@@ -16,7 +16,7 @@ public class Tile {
 	 * @param sprites
 	 * @return void
 	 */
-	public Tile(CCSprite[] sprites) {
+	public TileObject(CCSprite[] sprites) {
 		
 		_sprites = new ArrayList<CCSprite>();
 		
@@ -32,7 +32,7 @@ public class Tile {
 	 * @param sprite
 	 * @return void
 	 */
-	public Tile(CCSprite sprite) {
+	public TileObject(CCSprite sprite) {
 		
 		_sprites = new ArrayList<CCSprite>();
 		
