@@ -13,7 +13,7 @@ public class Tile {
 	 * Accepts an array of sprites and stores them in the array list of sprites
 	 * @param sprites
 	 */
-	public void Tile(CCSprite[] sprites) {
+	public Tile(CCSprite[] sprites) {
 		
 		_sprites = new ArrayList<CCSprite>();
 		
@@ -26,7 +26,7 @@ public class Tile {
 	 * Accepts a single sprite and stores it in the array list of sprites.
 	 * @param sprite
 	 */
-	public void Tile(CCSprite sprite) {
+	public Tile(CCSprite sprite) {
 		
 		_sprites = new ArrayList<CCSprite>();
 		
