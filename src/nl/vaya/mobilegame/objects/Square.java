@@ -1,7 +1,5 @@
 package nl.vaya.mobilegame.objects;
 
-import nl.jasperkennis.objects.Square;
-
 import org.cocos2d.nodes.CCSprite;
 
 public class Square {
