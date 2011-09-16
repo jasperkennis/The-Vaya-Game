@@ -1,13 +1,14 @@
 package nl.vaya.mobilegame;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.cocos2d.nodes.CCSprite;
 
 public class Tile {
 
 	protected ArrayList<CCSprite> _sprites;
-	protected CCSprite _activeSprite;
+	protected int _activeSprite = 0;
 	
 	
 	/**
@@ -21,8 +22,6 @@ public class Tile {
 		for (CCSprite sprite : sprites){
 			addSprite(sprite);
 		}
-		
-		_activeSprite = _sprites.get(0);
 	}
 	
 	/**
@@ -34,8 +33,6 @@ public class Tile {
 		_sprites = new ArrayList<CCSprite>();
 		
 		addSprite(sprite);
-		
-		_activeSprite = _sprites.get(0);
 	}
 	
 	
@@ -45,14 +42,25 @@ public class Tile {
 	
 	
 	public CCSprite getTile(){
-		return _activeSprite;
+		return _sprites.get(_activeSprite);
 	}
 	
+	/**
+	 * Sets the active sprite index according to the currently active sprite and the number of sprites
+	 */
 	public void update(){
+		// If there is only one sprite, no action is needed
 		if(_sprites.size() < 2){
 			return;
 		}
 		
+		// If the current active sprite isn't the last one, add up
+		if( ( _activeSprite + 1 ) < _sprites.size()){
+			_activeSprite++;
+			return;
+		}
 		
+		// Otherwise set the index to 0 
+		_activeSprite = 0;
 	}
 }
