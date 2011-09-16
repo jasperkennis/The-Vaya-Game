@@ -12,7 +12,7 @@ public class TileLayer extends CCLayer {
 	
 	public TileLayer(){
 		_tiles = new ArrayList<String>();
-		for(int i = 0; i < (40*40); i++){
+		for(int i = 0; i < (100*100); i++){
 			_tiles.add("a");
 			i++;
 		}
