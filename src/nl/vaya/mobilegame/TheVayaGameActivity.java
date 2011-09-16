@@ -58,6 +58,7 @@ public class TheVayaGameActivity extends Activity {
 		_floorLayer.schedule("update");
 		
 		_scene.addChild(_floorLayer);
+		_scene.addChild(_tileLayer);
 		CCDirector.sharedDirector().runWithScene(_scene);
 	}
 }

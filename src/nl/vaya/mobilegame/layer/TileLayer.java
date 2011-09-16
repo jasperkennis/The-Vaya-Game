@@ -1,7 +1,6 @@
 package nl.vaya.mobilegame.layer;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import org.cocos2d.layers.CCLayer;
 
@@ -13,8 +12,7 @@ public class TileLayer extends CCLayer {
 	
 	public TileLayer(){
 		_tiles = new ArrayList<String>();
-		int i = 0;
-		while (i < (40 * 40)) {
+		for(int i = 0; i < (40*40); i++){
 			_tiles.add("a");
 			i++;
 		}
