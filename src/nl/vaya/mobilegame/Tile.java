@@ -1,7 +1,6 @@
 package nl.vaya.mobilegame;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import org.cocos2d.nodes.CCSprite;
 
@@ -11,9 +10,11 @@ public class Tile {
 	protected int _activeSprite = 0;
 	
 	
+	
 	/**
 	 * Accepts an array of sprites and stores them in the array list of sprites
 	 * @param sprites
+	 * @return void
 	 */
 	public Tile(CCSprite[] sprites) {
 		
@@ -24,9 +25,12 @@ public class Tile {
 		}
 	}
 	
+	
+	
 	/**
 	 * Accepts a single sprite and stores it in the array list of sprites.
 	 * @param sprite
+	 * @return void
 	 */
 	public Tile(CCSprite sprite) {
 		
@@ -34,6 +38,7 @@ public class Tile {
 		
 		addSprite(sprite);
 	}
+	
 	
 	
 	public void addSprite(CCSprite sprite){
@@ -45,8 +50,11 @@ public class Tile {
 		return _sprites.get(_activeSprite);
 	}
 	
+	
+	
 	/**
 	 * Sets the active sprite index according to the currently active sprite and the number of sprites
+	 * @return void
 	 */
 	public void update(){
 		// If there is only one sprite, no action is needed
