@@ -13,6 +13,6 @@ public class FloorLayer extends CCLayer {
 	}
 	
 	public void update(float dt){
-		Log.i(logTag, "Update FloorLayer");
+		//Log.i(logTag, "Update FloorLayer");
 	}
 }
