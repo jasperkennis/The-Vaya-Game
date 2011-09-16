@@ -1,8 +1,6 @@
 package nl.vaya.mobilegame;
 
 import nl.vaya.mobilegame.layer.FloorLayer;
-import nl.vaya.mobilegame.layer.GameObjectLayer;
-import nl.vaya.mobilegame.layer.SkyLayer;
 
 import org.cocos2d.layers.CCLayer;
 import org.cocos2d.layers.CCScene;
@@ -11,12 +9,11 @@ import org.cocos2d.opengl.CCGLSurfaceView;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 
 public class TheVayaGameActivity extends Activity {
-
+	
 	protected CCGLSurfaceView _glSurfaceView;
 	protected CCScene _scene;
 	protected CCLayer _floorLayer;
@@ -50,16 +47,13 @@ public class TheVayaGameActivity extends Activity {
 
 		_scene = CCScene.node();
 		
+		//Make all layers
 		_floorLayer = new FloorLayer();
-		_gameObjectLayer = new GameObjectLayer();
-		_skyLayer = new SkyLayer();
 		
+		//Set all schedules
 		_floorLayer.schedule("update");
 		
 		_scene.addChild(_floorLayer);
-	}
-	
-	public void update(float dt){
-		Log.i("test", "running");
+		CCDirector.sharedDirector().runWithScene(_scene);
 	}
 }

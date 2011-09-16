@@ -4,10 +4,15 @@ import org.cocos2d.layers.CCLayer;
 
 import android.util.Log;
 
-public class FloorLayer extends CCLayer {
 
+public class FloorLayer extends CCLayer {
+	static final String logTag = "log_tag";
+	
+	public FloorLayer(){
+
+	}
 	
 	public void update(float dt){
-		Log.i("test", "running");
+		Log.i(logTag, "tets tetts!");
 	}
 }
