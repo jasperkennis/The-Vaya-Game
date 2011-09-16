@@ -1,6 +1,7 @@
 package nl.vaya.mobilegame;
 
 import nl.vaya.mobilegame.layer.FloorLayer;
+import nl.vaya.mobilegame.layer.TileLayer;
 
 import org.cocos2d.layers.CCLayer;
 import org.cocos2d.layers.CCScene;
@@ -19,6 +20,7 @@ public class TheVayaGameActivity extends Activity {
 	protected CCLayer _floorLayer;
 	protected CCLayer _gameObjectLayer;
 	protected CCLayer _skyLayer;
+	protected CCLayer _tileLayer;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -49,8 +51,10 @@ public class TheVayaGameActivity extends Activity {
 		
 		//Make all layers
 		_floorLayer = new FloorLayer();
+		_tileLayer = new TileLayer();
 		
 		//Set all schedules
+		_tileLayer.schedule("update");
 		_floorLayer.schedule("update");
 		
 		_scene.addChild(_floorLayer);
