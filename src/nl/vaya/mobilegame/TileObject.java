@@ -93,7 +93,7 @@ public class TileObject {
 	
 	public void setPosition(float x, float y){
 		float yPos = ((y*_tileHeight)+(_tileHeight/2)-winSize.height);
-		float xPos = ((x*_tileWidth)-(_tileWidth/2));
+		float xPos = ((x*_tileWidth)+(_tileWidth/2));
 		CGPoint position = CGPoint.ccp(xPos,yPos);
 		Log.i(logTag, "Position is x="+xPos+" y="+yPos);
 		for (CCSprite sprite : _sprites){
