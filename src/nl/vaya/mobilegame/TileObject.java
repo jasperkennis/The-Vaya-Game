@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 import org.cocos2d.nodes.CCSprite;
 import org.cocos2d.types.CGPoint;
+import org.cocos2d.types.CGSize;
 
 public class TileObject {
 
 	protected ArrayList<CCSprite> _sprites;
 	protected int _activeSprite = 0;
 	
-	
+	protected float _tileHeight = 30;
+	protected float _tileWidth = 30;
 	
 	/**
 	 * Accepts an array of sprites and stores them in the array list of sprites
@@ -73,8 +75,17 @@ public class TileObject {
 		_activeSprite = 0;
 	}
 	
+	public void setTileSize(float w, float h, CGSize winSize){
+		_tileWidth = winSize.width/w;
+		_tileHeight = winSize.height/h;
+		
+		for (CCSprite sprite : _sprites){
+			sprite.setContentSize(_tileWidth, _tileHeight);
+		}
+	}
 	
-	public void setPosition(CGPoint position){
+	public void setPosition(float x, float y){
+		CGPoint position = CGPoint.ccp((x*_tileWidth),(y*_tileHeight));
 		for (CCSprite sprite : _sprites){
 			sprite.setPosition(position);
 		}

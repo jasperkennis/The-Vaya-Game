@@ -3,7 +3,9 @@ package nl.vaya.mobilegame.layer;
 import nl.vaya.mobilegame.TileObject;
 
 import org.cocos2d.layers.CCLayer;
+import org.cocos2d.nodes.CCDirector;
 import org.cocos2d.nodes.CCSprite;
+import org.cocos2d.types.CGSize;
 
 import android.util.Log;
 
@@ -14,8 +16,13 @@ public class FloorLayer extends CCLayer {
 	protected int[] _tilePositionArray;
 	protected TileObject[] _tileArray;
 	
+	protected float _numTilesWidth = 12;
+	protected float _numTilesHeight = 8;
+	
+	protected CGSize winSize;
 	
 	public FloorLayer(){
+		winSize = CCDirector.sharedDirector().displaySize();
 		_tileArray = new TileObject[15];
 		_tilePositionArray = new int[] {
 				13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13,
@@ -87,8 +94,13 @@ public class FloorLayer extends CCLayer {
 		Log.i(logTag, "13");
 		_tileArray[14] = new TileObject(CCSprite.sprite("zandrechtlinks.png"));				//Tile object 14
 		Log.i(logTag, "14");
-		for(int i = 0; i< _tilePositionArray.length; i++){
-			_tileArray[_tilePositionArray[i]].setPosition();
+		for(int i = 0; i< 5; i++){
+		//for(int i = 0; i< _tilePositionArray.length; i++){
+			float y = (int)(i/40);
+			float x = (int)i-(y*40);
+			Log.i(logTag, "Hoekje "+i+" is x="+x+" en y="+y);
+			_tileArray[_tilePositionArray[i]].setTileSize(_numTilesWidth, _numTilesHeight, winSize);
+			_tileArray[_tilePositionArray[i]].setPosition(x,y);
 			this.addChild(_tileArray[_tilePositionArray[i]].getTile());
 			
 		}
