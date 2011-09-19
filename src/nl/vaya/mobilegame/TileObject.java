@@ -74,7 +74,7 @@ public class TileObject {
 	}
 	
 	
-	public void setPositionx(CGPoint position){
+	public void setPosition(CGPoint position){
 		for (CCSprite sprite : _sprites){
 			sprite.setPosition(position);
 		}

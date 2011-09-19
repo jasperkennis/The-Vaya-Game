@@ -88,6 +88,7 @@ public class FloorLayer extends CCLayer {
 		_tileArray[14] = new TileObject(CCSprite.sprite("zandrechtlinks.png"));				//Tile object 14
 		Log.i(logTag, "14");
 		for(int i = 0; i< _tilePositionArray.length; i++){
+			_tileArray[_tilePositionArray[i]].setPosition();
 			this.addChild(_tileArray[_tilePositionArray[i]].getTile());
 			
 		}
