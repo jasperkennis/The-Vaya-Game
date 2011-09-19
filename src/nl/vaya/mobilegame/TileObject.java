@@ -2,17 +2,24 @@ package nl.vaya.mobilegame;
 
 import java.util.ArrayList;
 
+import org.cocos2d.nodes.CCDirector;
 import org.cocos2d.nodes.CCSprite;
 import org.cocos2d.types.CGPoint;
 import org.cocos2d.types.CGSize;
 
+import android.util.Log;
+
 public class TileObject {
 
+	static final String logTag = "log_tag";
+	
 	protected ArrayList<CCSprite> _sprites;
 	protected int _activeSprite = 0;
 	
 	protected float _tileHeight = 30;
 	protected float _tileWidth = 30;
+	
+	protected CGSize winSize;
 	
 	/**
 	 * Accepts an array of sprites and stores them in the array list of sprites
@@ -20,7 +27,6 @@ public class TileObject {
 	 * @return void
 	 */
 	public TileObject(CCSprite[] sprites) {
-		
 		_sprites = new ArrayList<CCSprite>();
 		
 		for (CCSprite sprite : sprites){
@@ -75,17 +81,21 @@ public class TileObject {
 		_activeSprite = 0;
 	}
 	
-	public void setTileSize(float w, float h, CGSize winSize){
+	public void setTileSize(float w, float h, CGSize wSize){
+		winSize = wSize;
 		_tileWidth = winSize.width/w;
 		_tileHeight = winSize.height/h;
-		
+		Log.i(logTag, "Size is w="+_tileWidth+" h="+_tileHeight);
 		for (CCSprite sprite : _sprites){
 			sprite.setContentSize(_tileWidth, _tileHeight);
 		}
 	}
 	
 	public void setPosition(float x, float y){
-		CGPoint position = CGPoint.ccp((x*_tileWidth),(y*_tileHeight));
+		float yPos = ((y*_tileHeight)+(_tileHeight/2)-winSize.height);
+		float xPos = ((x*_tileWidth)-(_tileWidth/2));
+		CGPoint position = CGPoint.ccp(xPos,yPos);
+		Log.i(logTag, "Position is x="+xPos+" y="+yPos);
 		for (CCSprite sprite : _sprites){
 			sprite.setPosition(position);
 		}
