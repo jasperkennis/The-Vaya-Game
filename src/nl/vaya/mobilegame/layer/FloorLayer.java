@@ -58,19 +58,19 @@ public class FloorLayer extends CCLayer {
 		        13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13
 		};
 		_tileArray[1] = new TileObject(CCSprite.sprite("sand.png"));				//Tile object 1
-		_tileArray[2] = new TileObject(CCSprite.sprite("water.png"));				//Tile object 2
-		_tileArray[3] = new TileObject(CCSprite.sprite("zandrechtonder.png"));		//Tile object 3
-		_tileArray[4] = new TileObject(CCSprite.sprite("zandrechtboven.png"));		//Tile object 4
-		_tileArray[5] = new TileObject(CCSprite.sprite("hoekrechtsonder.png"));		//Tile object 5
-		_tileArray[6] = new TileObject(CCSprite.sprite("hoeklinksonder.png"));		//Tile object 6
-		_tileArray[7] = new TileObject(CCSprite.sprite("hoekrechtsboven.png"));		//Tile object 7
-		_tileArray[8] = new TileObject(CCSprite.sprite("hoeklinksboven.png"));		//Tile object 8
-		_tileArray[9] = new TileObject(CCSprite.sprite("binnenhoeklinksboven.png"));		//Tile object 9
-		_tileArray[10] = new TileObject(CCSprite.sprite("binnenhoekrechtsboven.png"));		//Tile object 10
-		_tileArray[11] = new TileObject(CCSprite.sprite("binnenhoeklinksonder.png"));		//Tile object 11
-		_tileArray[12] = new TileObject(CCSprite.sprite("binnenhoekrechtsonder.png"));		//Tile object 12
-		_tileArray[13] = new TileObject(CCSprite.sprite("zandrechtrechts.png"));		//Tile object 13
-		_tileArray[14] = new TileObject(CCSprite.sprite("zandrechtlinks.png"));		//Tile object 14
+		//_tileArray[2] = new TileObject(CCSprite.sprite("water.png"));				//Tile object 2
+		//_tileArray[3] = new TileObject(CCSprite.sprite("zandrechtonder.png"));		//Tile object 3
+		//_tileArray[4] = new TileObject(CCSprite.sprite("zandrechtboven.png"));		//Tile object 4
+		//_tileArray[5] = new TileObject(CCSprite.sprite("hoekrechtsonder.png"));		//Tile object 5
+		//_tileArray[6] = new TileObject(CCSprite.sprite("hoeklinksonder.png"));		//Tile object 6
+		//_tileArray[7] = new TileObject(CCSprite.sprite("hoekrechtsboven.png"));		//Tile object 7
+		//_tileArray[8] = new TileObject(CCSprite.sprite("hoeklinksboven.png"));		//Tile object 8
+		//_tileArray[9] = new TileObject(CCSprite.sprite("binnenhoeklinksboven.png"));		//Tile object 9
+		//_tileArray[10] = new TileObject(CCSprite.sprite("binnenhoekrechtsboven.png"));		//Tile object 10
+		//_tileArray[11] = new TileObject(CCSprite.sprite("binnenhoeklinksonder.png"));		//Tile object 11
+		//_tileArray[12] = new TileObject(CCSprite.sprite("binnenhoekrechtsonder.png"));		//Tile object 12
+		//_tileArray[13] = new TileObject(CCSprite.sprite("zandrechtrechts.png"));		//Tile object 13
+		//_tileArray[14] = new TileObject(CCSprite.sprite("zandrechtlinks.png"));		//Tile object 14
 		
 		for(int i = 0; i< _tilePositionArray.length; i++){
 			this.addChild(_tileArray[_tilePositionArray[i]].getTile());
