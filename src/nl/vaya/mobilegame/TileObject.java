@@ -3,6 +3,7 @@ package nl.vaya.mobilegame;
 import java.util.ArrayList;
 
 import org.cocos2d.nodes.CCSprite;
+import org.cocos2d.types.CGPoint;
 
 public class TileObject {
 
@@ -70,5 +71,12 @@ public class TileObject {
 		
 		// Otherwise set the index to 0 
 		_activeSprite = 0;
+	}
+	
+	
+	public void setPositionx(CGPoint position){
+		for (CCSprite sprite : _sprites){
+			sprite.setPosition(position);
+		}
 	}
 }
