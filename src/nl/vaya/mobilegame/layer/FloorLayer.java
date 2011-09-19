@@ -94,8 +94,8 @@ public class FloorLayer extends CCLayer {
 		Log.i(logTag, "13");
 		_tileArray[14] = new TileObject(CCSprite.sprite("zandrechtlinks.png"));				//Tile object 14
 		Log.i(logTag, "14");
-		//for(int i = 0; i< 5; i++){
-		for(int i = 0; i< _tilePositionArray.length; i++){
+		for(int i = 0; i< 4; i++){
+		//for(int i = 0; i< _tilePositionArray.length; i++){
 			float y = (int)(i/40);
 			float x = (int)i-(y*40);
 			_tileArray[_tilePositionArray[i]].setTileSize(_numTilesWidth, _numTilesHeight, winSize);
