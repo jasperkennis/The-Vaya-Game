@@ -5,8 +5,10 @@ import nl.vaya.mobilegame.TileObject;
 import org.cocos2d.layers.CCLayer;
 import org.cocos2d.nodes.CCDirector;
 import org.cocos2d.nodes.CCSprite;
+import org.cocos2d.nodes.CCTextureCache;
 import org.cocos2d.types.CGSize;
 
+import android.graphics.Bitmap;
 import android.util.Log;
 
 
@@ -66,7 +68,7 @@ public class FloorLayer extends CCLayer {
 		        13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13,
 		        13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13
 		};
-		_tileArray[1] = new TileObject(CCSprite.sprite("sand.png"));						//Tile object 1
+		_tileArray[1] = new TileObject(addSprite("sand.png"));						//Tile object 1
 		Log.i(logTag, "1");
 		_tileArray[2] = new TileObject(CCSprite.sprite("water.png"));						//Tile object 2
 		Log.i(logTag, "2");
@@ -104,6 +106,10 @@ public class FloorLayer extends CCLayer {
 			
 		}
 	}
+	
+	public static CCSprite addSprite(String path) {
+        return new CCSprite(CCTextureCache.sharedTextureCache().addImage(path));
+    }
 	
 	public void update(float dt){
 		//Log.i(logTag, "Update FloorLayer");
