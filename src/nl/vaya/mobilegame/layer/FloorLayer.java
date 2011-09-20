@@ -72,13 +72,13 @@ public class FloorLayer extends CCLayer {
 		        13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13
 		};
 		
-		// Add a spritesheet:
-		CCSpriteSheet sprites = CCSpriteSheet.spriteSheet("sprites.png");
-		addChild(sprites);
+		// Add a FloorSpriteSheetheet:
+		CCSpriteSheet FloorSpriteSheet = CCSpriteSheet.spriteSheet("FloorSpriteSheet.png");
+		addChild(FloorSpriteSheet);
 
 		// Add the waterSprite to the sheet
-		CCSprite waterSprite = CCSprite.sprite(sprites.getTexture(), new CGRect(CGPoint.ccp(0.0f , 0.0f), CGSize.make(32.0f, 32.0f)));
-		sprites.addChild(waterSprite);
+		CCSprite waterSprite = CCSprite.sprite(FloorSpriteSheet.getTexture(), new CGRect(CGPoint.ccp(0.0f , 0.0f), CGSize.make(32.0f, 32.0f)));
+		FloorSpriteSheet.addChild(waterSprite);
 		
 		// Set waterSprite position
 		CGSize s = CCDirector.sharedDirector().winSize();
@@ -87,8 +87,8 @@ public class FloorLayer extends CCLayer {
 		// Create an animation
 		CCAnimation waterAnimation = CCAnimation.animation("waterAnimation", 0.3f);
 		
-		CCSpriteFrame waterFrame1 = CCSpriteFrame.frame(sprites.getTexture(), new CGRect(CGPoint.ccp(0.0f,0.0f), CGSize.make(32.0f, 32.0f)), CGPoint.make(0.0f, 0.0f));
-		CCSpriteFrame waterFrame2 = CCSpriteFrame.frame(sprites.getTexture(), new CGRect(CGPoint.ccp(32.0f,0.0f), CGSize.make(32.0f, 32.0f)), CGPoint.make(0.0f, 0.0f));
+		CCSpriteFrame waterFrame1 = CCSpriteFrame.frame(FloorSpriteSheet.getTexture(), new CGRect(CGPoint.ccp(0.0f,0.0f), CGSize.make(32.0f, 32.0f)), CGPoint.make(0.0f, 0.0f));
+		CCSpriteFrame waterFrame2 = CCSpriteFrame.frame(FloorSpriteSheet.getTexture(), new CGRect(CGPoint.ccp(32.0f,0.0f), CGSize.make(32.0f, 32.0f)), CGPoint.make(0.0f, 0.0f));
 		
 		waterAnimation.addFrame(waterFrame1);
 		waterAnimation.addFrame(waterFrame2);
