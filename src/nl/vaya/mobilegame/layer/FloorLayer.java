@@ -2,17 +2,8 @@ package nl.vaya.mobilegame.layer;
 
 import nl.vaya.mobilegame.TileObject;
 
-import org.cocos2d.actions.base.CCRepeatForever;
-import org.cocos2d.actions.interval.CCAnimate;
 import org.cocos2d.layers.CCLayer;
-import org.cocos2d.nodes.CCAnimation;
 import org.cocos2d.nodes.CCDirector;
-import org.cocos2d.nodes.CCSprite;
-import org.cocos2d.nodes.CCSpriteFrame;
-import org.cocos2d.nodes.CCSpriteSheet;
-import org.cocos2d.nodes.CCTextureCache;
-import org.cocos2d.types.CGPoint;
-import org.cocos2d.types.CGRect;
 import org.cocos2d.types.CGSize;
 
 public class FloorLayer extends CCLayer {
@@ -72,31 +63,7 @@ public class FloorLayer extends CCLayer {
 		        13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13
 		};
 		
-		// Add a FloorSpriteSheetheet:
-		CCSpriteSheet FloorSpriteSheet = CCSpriteSheet.spriteSheet("FloorSpriteSheet.png");
-		addChild(FloorSpriteSheet);
-
-		// Add the waterSprite to the sheet
-		CCSprite waterSprite = CCSprite.sprite(FloorSpriteSheet.getTexture(), new CGRect(CGPoint.ccp(0.0f , 0.0f), CGSize.make(32.0f, 32.0f)));
-		FloorSpriteSheet.addChild(waterSprite);
 		
-		// Set waterSprite position
-		CGSize s = CCDirector.sharedDirector().winSize();
-		waterSprite.setPosition(CGPoint.ccp(s.width/2,s.height/2));
-		
-		// Create an animation
-		CCAnimation waterAnimation = CCAnimation.animation("waterAnimation", 0.3f);
-		
-		CCSpriteFrame waterFrame1 = CCSpriteFrame.frame(FloorSpriteSheet.getTexture(), new CGRect(CGPoint.ccp(0.0f,0.0f), CGSize.make(32.0f, 32.0f)), CGPoint.make(0.0f, 0.0f));
-		CCSpriteFrame waterFrame2 = CCSpriteFrame.frame(FloorSpriteSheet.getTexture(), new CGRect(CGPoint.ccp(32.0f,0.0f), CGSize.make(32.0f, 32.0f)), CGPoint.make(0.0f, 0.0f));
-		
-		waterAnimation.addFrame(waterFrame1);
-		waterAnimation.addFrame(waterFrame2);
-		
-		CCAnimate waterAction = CCAnimate.action(waterAnimation);
-		CCRepeatForever repeat = CCRepeatForever.action(waterAction);
-		
-		waterSprite.runAction(repeat);
 	}
 	
 	public void update(float dt){
