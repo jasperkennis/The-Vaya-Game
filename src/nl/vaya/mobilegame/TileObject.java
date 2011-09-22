@@ -88,7 +88,7 @@ public class TileObject {
 		for (CCSprite sprite : _sprites){
 			//sprite.setContentSize(_tileWidth, _tileHeight);
 			sprite.setScaleX(_tileWidth/(sprite.getContentSize().width));
-			sprite.setScaleX(_tileHeight/(sprite.getContentSize().height));
+			sprite.setScaleY(_tileHeight/(sprite.getContentSize().height));
 		}
 	}
 	
