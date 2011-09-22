@@ -51,7 +51,7 @@ public class TheVayaGameActivity extends Activity {
 		
 		//Make all layers
 		_floorLayer = new FloorLayer();
-		_tileLayer = new TileLayer();
+		//_tileLayer = new TileLayer();
 		
 		//Set all schedules
 		//_tileLayer.schedule("update");
