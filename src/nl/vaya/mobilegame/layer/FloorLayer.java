@@ -1,18 +1,13 @@
 package nl.vaya.mobilegame.layer;
 
-<<<<<<< HEAD
-import nl.vaya.mobilegame.tiles.TileObject;
-<<<<<<< HEAD
-import nl.vaya.mobilegame.tiles.Water;
-=======
 import nl.vaya.mobilegame.TileObject;
->>>>>>> parent of 055b5df... Created a new namespace for tiles, and moved the tile object in there. I
-=======
->>>>>>> parent of 0cabbf0... Created the new water object
 
 import org.cocos2d.layers.CCLayer;
 import org.cocos2d.nodes.CCDirector;
+import org.cocos2d.nodes.CCSprite;
 import org.cocos2d.types.CGSize;
+
+import android.util.Log;
 
 public class FloorLayer extends CCLayer {
 	static final String logTag = "log_tag";
@@ -71,7 +66,6 @@ public class FloorLayer extends CCLayer {
 		        13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13
 		};
 		
-<<<<<<< HEAD
 		_tileArray[1] = "sand.png";						//Tile object 1
 		Log.i(logTag, "1");
 		_tileArray[2] = "water.png";						//Tile object 2
@@ -110,12 +104,7 @@ public class FloorLayer extends CCLayer {
 			tile.setTileSize(_numTilesWidth, _numTilesHeight, winSize);
 			tile.setPosition(x,y);
 			this.addChild(tile.getTile());
-
 		}
-
-=======
-		
->>>>>>> parent of 4fd9eee... Solved merge conflict.
 	}
 	
 	public void update(float dt){
