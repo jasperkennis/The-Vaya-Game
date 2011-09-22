@@ -2,7 +2,6 @@ package nl.vaya.mobilegame;
 
 import java.util.ArrayList;
 
-import org.cocos2d.nodes.CCDirector;
 import org.cocos2d.nodes.CCSprite;
 import org.cocos2d.types.CGPoint;
 import org.cocos2d.types.CGSize;
