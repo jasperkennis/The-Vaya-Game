@@ -12,10 +12,7 @@ import nl.vaya.mobilegame.TileObject;
 
 import org.cocos2d.layers.CCLayer;
 import org.cocos2d.nodes.CCDirector;
-import org.cocos2d.nodes.CCSprite;
 import org.cocos2d.types.CGSize;
-
-import android.util.Log;
 
 public class FloorLayer extends CCLayer {
 	static final String logTag = "log_tag";
@@ -74,6 +71,7 @@ public class FloorLayer extends CCLayer {
 		        13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13
 		};
 		
+<<<<<<< HEAD
 		_tileArray[1] = "sand.png";						//Tile object 1
 		Log.i(logTag, "1");
 		_tileArray[2] = "water.png";						//Tile object 2
@@ -115,6 +113,9 @@ public class FloorLayer extends CCLayer {
 
 		}
 
+=======
+		
+>>>>>>> parent of 4fd9eee... Solved merge conflict.
 	}
 	
 	public void update(float dt){
