@@ -14,8 +14,8 @@ public class FloorLayer extends CCLayer {
 	protected int[] _tilePositionArray;
 	protected TileObject[] _tileArray;
 	
-	protected float _numTilesWidth = 12;
-	protected float _numTilesHeight = 8;
+	protected float _numTilesWidth = 15;
+	protected float _numTilesHeight = 10;
 	
 	protected CGSize winSize;
 	
