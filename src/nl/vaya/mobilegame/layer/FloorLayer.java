@@ -7,8 +7,6 @@ import org.cocos2d.nodes.CCDirector;
 import org.cocos2d.nodes.CCSprite;
 import org.cocos2d.types.CGSize;
 
-import android.util.Log;
-
 public class FloorLayer extends CCLayer {
 	static final String logTag = "log_tag";
 	
@@ -66,35 +64,22 @@ public class FloorLayer extends CCLayer {
 		        13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13
 		};
 		
-		_tileArray[1] = "sand.png";						//Tile object 1
-		Log.i(logTag, "1");
-		_tileArray[2] = "water.png";						//Tile object 2
-		Log.i(logTag, "2");
-		_tileArray[3] = "zandrechtonder.png";				//Tile object 3
-		Log.i(logTag, "3");
-		_tileArray[4] = "zandrechtboven.png";				//Tile object 4
-		Log.i(logTag, "4");
-		_tileArray[5] = "hoekrechtsonder.png";				//Tile object 5
-		Log.i(logTag, "5");
-		_tileArray[6] = "hoeklinksonder.png";				//Tile object 6
-		Log.i(logTag, "6");
-		_tileArray[7] = "hoekrechtsboven.png";				//Tile object 7
-		Log.i(logTag, "7");
-		_tileArray[8] = "hoeklinksboven.png";				//Tile object 8
-		Log.i(logTag, "8");
-		_tileArray[9] = "binnenhoeklinksboven.png";		//Tile object 9
-		Log.i(logTag, "9");
-		_tileArray[10] = "binnenhoekrechtsboven.png";		//Tile object 10
-		Log.i(logTag, "10");
-		_tileArray[11] = "binnenhoeklinksonder.png";		//Tile object 11
-		Log.i(logTag, "11");
-		_tileArray[12] = "binnenhoekrechtsonder.png";		//Tile object 12
-		Log.i(logTag, "12");
-		_tileArray[13] = "zandrechtrechts.png";			//Tile object 13
-		Log.i(logTag, "13");
-		_tileArray[14] = "zandrechtlinks.png";				//Tile object 14
-		Log.i(logTag, "14");
-		for(int i = 0; i< 100; i++){
+		_tileArray[14] = "sand.png";
+		_tileArray[13] = "water.png";
+		_tileArray[11] = "zandrechtonder.png";
+		_tileArray[9] = "zandrechtboven.png";
+		_tileArray[7] = "hoekrechtsonder.png";
+		_tileArray[5] = "hoeklinksonder.png";
+		_tileArray[6] = "hoekrechtsboven.png";
+		_tileArray[8] = "hoeklinksboven.png";
+		_tileArray[1] = "binnenhoeklinksboven.png";
+		_tileArray[3] = "binnenhoekrechtsboven.png";
+		_tileArray[2] = "binnenhoeklinksonder.png";
+		_tileArray[4] = "binnenhoekrechtsonder.png";
+		_tileArray[12] = "zandrechtrechts.png";
+		_tileArray[10] = "zandrechtlinks.png";
+		
+		for(int i = 0; i< 400; i++){
 		//for(int i = 0; i< _tilePositionArray.length; i++){
 			float y = (int)(i/40);
 			float x = (int)i-(y*40);
@@ -104,7 +89,9 @@ public class FloorLayer extends CCLayer {
 			tile.setTileSize(_numTilesWidth, _numTilesHeight, winSize);
 			tile.setPosition(x,y);
 			this.addChild(tile.getTile());
+
 		}
+
 	}
 	
 	public void update(float dt){

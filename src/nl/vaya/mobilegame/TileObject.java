@@ -87,8 +87,8 @@ public class TileObject {
 		Log.i(logTag, "Size is w="+_tileWidth+" h="+_tileHeight);
 		for (CCSprite sprite : _sprites){
 			//sprite.setContentSize(_tileWidth, _tileHeight);
-			sprite.setScaleX(_tileWidth);
-			sprite.setScaleX(_tileHeight);
+			sprite.setScaleX(_tileWidth/(sprite.getContentSize().width));
+			sprite.setScaleX(_tileHeight/(sprite.getContentSize().height));
 		}
 	}
 	
