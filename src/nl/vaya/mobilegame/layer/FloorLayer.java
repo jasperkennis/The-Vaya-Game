@@ -104,7 +104,9 @@ public class FloorLayer extends CCLayer {
 			tile.setTileSize(_numTilesWidth, _numTilesHeight, winSize);
 			tile.setPosition(x,y);
 			this.addChild(tile.getTile());
+
 		}
+
 	}
 	
 	public void update(float dt){
