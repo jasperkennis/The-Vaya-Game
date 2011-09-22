@@ -1,6 +1,6 @@
 package nl.vaya.mobilegame.layer;
 
-import nl.vaya.mobilegame.TileObject;
+import nl.vaya.mobilegame.tiles.TileObject;
 
 import org.cocos2d.layers.CCLayer;
 import org.cocos2d.nodes.CCDirector;
