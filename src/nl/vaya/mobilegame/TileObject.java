@@ -12,11 +12,11 @@ public class TileObject {
 
 	static final String logTag = "log_tag";
 	
-	protected ArrayList<CCSprite> _sprites;
+	static ArrayList<CCSprite> _sprites;
 	protected int _activeSprite = 0;
 	
-	protected float _tileHeight = 30;
-	protected float _tileWidth = 30;
+	protected float _tileHeight = 32;
+	protected float _tileWidth = 32;
 	
 	protected CGSize winSize;
 	
