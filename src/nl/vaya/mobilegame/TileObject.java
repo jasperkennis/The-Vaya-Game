@@ -1,4 +1,4 @@
-package nl.vaya.mobilegame.tiles;
+package nl.vaya.mobilegame;
 
 import java.util.ArrayList;
 

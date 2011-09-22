@@ -1,7 +1,11 @@
 package nl.vaya.mobilegame.layer;
 
+<<<<<<< HEAD
 import nl.vaya.mobilegame.tiles.TileObject;
 import nl.vaya.mobilegame.tiles.Water;
+=======
+import nl.vaya.mobilegame.TileObject;
+>>>>>>> parent of 055b5df... Created a new namespace for tiles, and moved the tile object in there. I
 
 import org.cocos2d.layers.CCLayer;
 import org.cocos2d.nodes.CCDirector;
