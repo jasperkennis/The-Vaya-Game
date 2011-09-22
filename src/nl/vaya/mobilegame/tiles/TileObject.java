@@ -2,7 +2,6 @@ package nl.vaya.mobilegame.tiles;
 
 import java.util.ArrayList;
 
-import org.cocos2d.nodes.CCDirector;
 import org.cocos2d.nodes.CCSprite;
 import org.cocos2d.types.CGPoint;
 import org.cocos2d.types.CGSize;
@@ -87,7 +86,9 @@ public class TileObject {
 		_tileHeight = winSize.height/h;
 		Log.i(logTag, "Size is w="+_tileWidth+" h="+_tileHeight);
 		for (CCSprite sprite : _sprites){
-			sprite.setContentSize(_tileWidth, _tileHeight);
+			//sprite.setContentSize(_tileWidth, _tileHeight);
+			sprite.setScaleX(_tileWidth);
+			sprite.setScaleX(_tileHeight);
 		}
 	}
 	
